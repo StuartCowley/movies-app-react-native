@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
-import {SafeAreaView, View, Text, TextInput, Button} from 'react-native';
+import React, { useState } from "react";
+import { SafeAreaView, View, Text, TextInput, Button } from "react-native";
 
-import styles from './Login.style';
+import styles from "./Login.style";
 
 const Login = () => {
   const [email, setEmail] = useState();
