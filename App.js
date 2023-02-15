@@ -1,6 +1,13 @@
 import { StatusBar } from "expo-status-bar";
 import { useEffect, useState } from "react";
-import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
+import {
+  FlatList,
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 
 import { getPopularMovies } from "./src/api/movies";
 
@@ -20,13 +27,13 @@ export default function App() {
     <View style={styles.container}>
       <Text>MOST POPULAR MOVIES</Text>
       <ScrollView horizontal>
-        {popularMovies.map((popularMovie) => (
-          <MovieCard
-            key={popularMovie.title}
-            image={popularMovie.posterImage}
-            title={popularMovie.title}
-          />
-        ))}
+        <FlatList
+          data={popularMovies}
+          renderItem={({ item }) => (
+            <MovieCard image={item.posterImage} title={item.title} />
+          )}
+          horizontal
+        />
       </ScrollView>
       <StatusBar style="auto" />
     </View>
