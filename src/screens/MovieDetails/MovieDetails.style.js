@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     marginTop: -50,
   },
   bannerImage: {
-    width: '100%',
+    width: "100%",
     height: 300,
     borderBottomRightRadius: 50,
     borderBottomLeftRadius: 50,
@@ -17,19 +17,19 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   bold: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   filmTitle: {},
   filmInfoContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
   },
   filmInfo: {
-    flexDirection: 'column',
+    flexDirection: "column",
     marginLeft: 10,
   },
   metaDataContainer: {
-    flexDirection: 'row',
+    flexDirection: "row",
   },
   marginTop: {
     marginTop: 20,
