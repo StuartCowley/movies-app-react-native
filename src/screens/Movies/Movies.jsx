@@ -1,8 +1,8 @@
-import React, {useState, useEffect} from 'react';
-import {View, Text, Image, FlatList} from 'react-native';
-import { getPopularMovies } from '../../api/movies';
+import React, { useState, useEffect } from "react";
+import { View, Text, Image, FlatList } from "react-native";
 
-import styles from './Movies.styles';
+import styles from "./Movies.styles";
+import { getPopularMovies } from "../../api/movies";
 
 const Movies = () => {
   const [popularMovies, setPopularMovies] = useState([]);
@@ -17,9 +17,9 @@ const Movies = () => {
     setPopularMovies(fetchedPopularMovies);
   };
 
-  const MovieCard = ({image, title}) => (
+  const MovieCard = ({ image, title }) => (
     <View style={styles.movieColumnContainer}>
-      <Image source={{uri: image}} style={styles.movieColumnImage} />
+      <Image source={{ uri: image }} style={styles.movieColumnImage} />
       <Text>{title}</Text>
     </View>
   );
@@ -29,7 +29,7 @@ const Movies = () => {
       <Text style={styles.title}>MOST POPULAR MOVIES</Text>
       <FlatList
         data={popularMovies}
-        renderItem={({item}) => (
+        renderItem={({ item }) => (
           <MovieCard image={item.posterImage} title={item.title} />
         )}
         horizontal
