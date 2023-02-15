@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginVertical: 15,
   },
   movieColumnContainer: {
@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     width: 150,
   },
   movieColumnTitle: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginVertical: 15,
   },
 
@@ -24,11 +24,11 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   movieRowContainer: {
-    flexDirection: 'row',
+    flexDirection: "row",
     marginBottom: 20,
   },
   movieRowTitle: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   movieRowImage: {
     width: 75,
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
 
   movieInfoContainer: {
     marginLeft: 10,
-    justifyContent: 'space-between',
+    justifyContent: "space-between",
   },
 });
 

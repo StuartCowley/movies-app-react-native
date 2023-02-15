@@ -1,7 +1,7 @@
-import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
+import { NavigationContainer } from "@react-navigation/native";
+import React from "react";
 
-import AppContainer from './AppContainer.jsx';
+import AppContainer from "./AppContainer.jsx";
 
 const RouteContainer = () => {
   return (
