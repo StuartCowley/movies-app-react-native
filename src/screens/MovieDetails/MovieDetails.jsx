@@ -1,13 +1,13 @@
-import React from 'react';
-import {Image, View, Text, SafeAreaView, ScrollView} from 'react-native';
-import {useRoute} from '@react-navigation/native';
+import { useRoute } from "@react-navigation/native";
+import React from "react";
+import { Image, View, Text, SafeAreaView, ScrollView } from "react-native";
 
-import styles from './Movie.style.js';
+import styles from "./MovieDetails.style.js";
 
-const Movie = () => {
-  const {params} = useRoute();
+const MovieDetails = () => {
+  const { params } = useRoute();
 
-  const MetaData = ({title, value}) => (
+  const MetaData = ({ title, value }) => (
     <View style={styles.metaDataContainer}>
       <Text style={[styles.bold, styles.marginRight]}>{title}:</Text>
       <Text>{value}</Text>
@@ -19,7 +19,7 @@ const Movie = () => {
       <ScrollView>
         <Image
           source={{
-            uri: 'https://m.media-amazon.com/images/M/MV5BZTQ0MmI0MmEtNjQwNi00NDFmLWEwMGUtZWYyMGYxYzQ5ZTNiXkEyXkFqcGdeQWxiaWFtb250._V1_.jpg',
+            uri: "https://m.media-amazon.com/images/M/MV5BZTQ0MmI0MmEtNjQwNi00NDFmLWEwMGUtZWYyMGYxYzQ5ZTNiXkEyXkFqcGdeQWxiaWFtb250._V1_.jpg",
           }}
           style={styles.bannerImage}
         />
@@ -29,7 +29,7 @@ const Movie = () => {
             <>
               <Image
                 source={{
-                  uri: 'https://m.media-amazon.com/images/M/MV5BMWRiZGQ1NDMtODQ2OS00MDlhLWJkZGYtM2ZmNjlhZThjOWRmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg',
+                  uri: "https://m.media-amazon.com/images/M/MV5BMWRiZGQ1NDMtODQ2OS00MDlhLWJkZGYtM2ZmNjlhZThjOWRmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg",
                 }}
                 style={styles.posterImage}
               />
@@ -59,4 +59,4 @@ const Movie = () => {
   );
 };
 
-export default Movie;
+export default MovieDetails;
