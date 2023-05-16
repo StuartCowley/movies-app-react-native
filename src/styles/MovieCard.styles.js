@@ -9,7 +9,6 @@ const styles = StyleSheet.create({
   movieColumnImage: {
     width: 150,
     height: 200,
-    // marginRight: 8,
     borderRadius: 10,
   },
   title: {
