@@ -1,9 +1,21 @@
+import { useEffect, useState } from "react";
 import { ScrollView, StyleSheet, Text, SafeAreaView } from "react-native";
 
-import { popularMovies } from "./src/api/movies";
+import { getPopularMovies } from "./src/api/movies";
 import MovieCard from "./src/components/MovieCard/MovieCard";
 
 export default function App() {
+  const [popularMovies, setPopularMovies] = useState([]);
+
+  const fetchPopularMovies = async () => {
+    const result = await getPopularMovies();
+    setPopularMovies(result);
+  };
+
+  useEffect(() => {
+    fetchPopularMovies();
+  }, []);
+
   return (
     <SafeAreaView style={styles.container}>
       <Text>MOST POPULAR MOVIES</Text>
