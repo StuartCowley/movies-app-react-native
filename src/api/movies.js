@@ -1,4 +1,4 @@
-const popularMovies = [
+export const popularMovies = [
   {
     id: 1,
     posterImage:
