@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ScrollView, StyleSheet, Text, SafeAreaView } from "react-native";
+import { FlatList, SafeAreaView, StyleSheet, Text } from "react-native";
 
 import { getPopularMovies } from "./src/api/movies";
 import MovieCard from "./src/components/MovieCard/MovieCard";
@@ -19,19 +19,18 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <Text>MOST POPULAR MOVIES</Text>
-      <ScrollView horizontal>
-        {popularMovies.map((movie) => {
-          return (
-            <MovieCard
-              key={movie.id}
-              title={movie.title}
-              imageUrl={movie.posterImage}
-              storyline={movie.storyline}
-              releaseDate={movie.releaseDate}
-            />
-          );
-        })}
-      </ScrollView>
+      <FlatList
+        data={popularMovies}
+        renderItem={({ item }) => (
+          <MovieCard
+            title={item.title}
+            imageUrl={item.posterImage}
+            storyline={item.storyline}
+            releaseDate={item.releaseDate}
+          />
+        )}
+        horizontal
+      />
     </SafeAreaView>
   );
 }
