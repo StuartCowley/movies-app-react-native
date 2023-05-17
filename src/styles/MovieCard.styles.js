@@ -6,6 +6,11 @@ const styles = StyleSheet.create({
     width: 150,
     padding: 10,
   },
+  movieRowContainer: {
+    marginRight: 20,
+    flexDirection: "row",
+    padding: 10,
+  },
   movieColumnImage: {
     width: 150,
     height: 200,
