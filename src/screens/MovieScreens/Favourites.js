@@ -1,5 +1,11 @@
-import { Text } from "react-native";
+import { SafeAreaView, Text } from "react-native";
+
+import styles from "../../styles/Favourites.styles";
 
 export default function Favourites() {
-  return <Text>Favourites</Text>;
+  return (
+    <SafeAreaView style={styles.favouritesWrap}>
+      <Text style={styles.title}>Favourites</Text>
+    </SafeAreaView>
+  );
 }
