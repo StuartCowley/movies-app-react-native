@@ -1,15 +1,18 @@
 import { SafeAreaView, StyleSheet } from "react-native";
 
+import { AuthContext } from "./src/context/AuthorisationContext";
 import RouteContainer from "./src/routes/RouteContainer";
 import Movies from "./src/screens/MovieScreens/Movies";
 
 export default function App() {
   return (
-    <RouteContainer>
-      <SafeAreaView style={styles.container}>
-        <Movies />
-      </SafeAreaView>
-    </RouteContainer>
+    <AuthContext>
+      <RouteContainer>
+        <SafeAreaView style={styles.container}>
+          <Movies />
+        </SafeAreaView>
+      </RouteContainer>
+    </AuthContext>
   );
 }
 

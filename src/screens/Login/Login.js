@@ -1,11 +1,17 @@
 import { useState } from "react";
 import { Pressable, Text, TextInput, View } from "react-native";
 
+import { useAuthorisation } from "../../context/AuthorisationContext";
 import styles from "../../styles/Login.styles";
 
 const Login = () => {
+  const [_, setIsAuthenticated] = useAuthorisation();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const onPress = () => {
+    setIsAuthenticated(true);
+  };
 
   return (
     <View style={styles.loginWrap}>
@@ -21,7 +27,7 @@ const Login = () => {
         value={password}
         onChangeText={setPassword}
       />
-      <Pressable style={styles.submitWrapper} onPress={console.log("Pressed")}>
+      <Pressable style={styles.submitWrapper} onPress={onPress}>
         <Text style={styles.submit}>Login</Text>
       </Pressable>
     </View>

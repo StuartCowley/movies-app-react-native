@@ -1,12 +1,11 @@
 import { NavigationContainer } from "@react-navigation/native";
-import { useState } from "react";
 
 import AppContainer from "./AppContainer";
 import AuthContainer from "./AuthContainer";
+import { useAuthorisation } from "../context/AuthorisationContext";
 
 const RouteContainer = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  // TODO finish implementation with context
+  const [isAuthenticated] = useAuthorisation();
 
   return (
     <NavigationContainer>
