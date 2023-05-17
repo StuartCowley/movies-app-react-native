@@ -1,10 +1,10 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import Account from "../screens/Movies/Account";
-import Favourites from "../screens/Movies/Favourites";
-import MovieDetails from "../screens/Movies/MovieDetails";
-import Movies from "../screens/Movies/Movies";
+import Account from "../screens/MovieScreens/Account";
+import Favourites from "../screens/MovieScreens/Favourites";
+import MovieDetails from "../screens/MovieScreens/MovieDetails";
+import Movies from "../screens/MovieScreens/Movies";
 
 const Stack = createNativeStackNavigator();
 

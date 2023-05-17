@@ -1,7 +1,7 @@
 import { SafeAreaView, StyleSheet } from "react-native";
 
 import RouteContainer from "./src/routes/RouteContainer";
-import Movies from "./src/screens/Movies/Movies";
+import Movies from "./src/screens/MovieScreens/Movies";
 
 export default function App() {
   return (
