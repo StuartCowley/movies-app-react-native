@@ -7,6 +7,7 @@ import MovieCard from "../../components/MovieCard";
 import styles from "../../styles/Movies.styles";
 
 export default function Movies() {
+  // TODO Add all movies component with vertical scroll below popular movies
   const navigation = useNavigation();
   const [popularMovies, setPopularMovies] = useState([]);
 
