@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import { useEffect, useState } from "react";
 import { FlatList, SafeAreaView, Text } from "react-native";
 
@@ -6,6 +7,7 @@ import MovieCard from "../../components/MovieCard";
 import styles from "../../styles/Movies.styles";
 
 export default function Movies() {
+  const navigation = useNavigation();
   const [popularMovies, setPopularMovies] = useState([]);
 
   const fetchPopularMovies = async () => {
@@ -26,6 +28,9 @@ export default function Movies() {
           <MovieCard
             title={item.title}
             imageUrl={item.posterImage}
+            onPress={() => {
+              navigation.navigate("Movie", { movieId: item.id });
+            }}
             storyline={item.storyline}
             releaseDate={item.releaseDate}
           />
