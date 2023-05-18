@@ -1,14 +1,37 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-  movieDetailsContainer: {
-    marginRight: 20,
-    width: 150,
-    padding: 10,
+  container: {
+    marginHorizontal: 24,
+    marginTop: -60,
+  },
+  detailTextWrap: {
+    marginBottom: 24,
+  },
+  headerWrap: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 24,
+  },
+  inlineText: {
+    flexDirection: "row",
+  },
+  mainImage: {
+    height: 360,
+    borderBottomLeftRadius: 80,
+    borderBottomRightRadius: 80,
+  },
+  secondaryImage: {
+    width: 140,
+    height: 240,
+    borderRadius: 10,
+    marginRight: 24,
   },
   title: {
     fontWeight: "bold",
-    marginBottom: 8,
+  },
+  titleUppercase: {
+    textTransform: "uppercase",
   },
 });
 

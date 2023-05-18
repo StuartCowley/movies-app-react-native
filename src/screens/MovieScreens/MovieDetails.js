@@ -1,6 +1,6 @@
 import { useRoute } from "@react-navigation/native";
 import { useEffect, useState } from "react";
-import { Text, View } from "react-native";
+import { Image, ScrollView, Text, View } from "react-native";
 
 import { getIndividualMovie } from "../../api/movies";
 import Button from "../../components/Button";
@@ -19,7 +19,6 @@ const MovieDetails = () => {
 
   const getMovieDetails = async () => {
     const result = await getIndividualMovie(params.movieId);
-    // TODO: make this data more structured before setting state and style this
     setMovieDetails(result);
   };
 
@@ -30,11 +29,48 @@ const MovieDetails = () => {
   };
 
   return (
-    <View style={styles.movieDetailsContainer}>
-      <Text style={styles.title}>{movieDetails.title}</Text>
-      <Text style={styles.title}>{movieDetails.releaseDate}</Text>
-      <Button label="Add to favourites" onPress={addFavourite} />
-    </View>
+    <ScrollView style={styles.movieDetailsContainer}>
+      <Image
+        style={styles.mainImage}
+        source={{ uri: movieDetails.bannerImage }}
+      />
+      <View style={styles.container}>
+        <View style={styles.headerWrap}>
+          <Image
+            style={styles.secondaryImage}
+            source={{ uri: movieDetails.posterImage }}
+          />
+          <View>
+            <Text style={styles.title}>{movieDetails.title}</Text>
+            <Text>{movieDetails.duration}</Text>
+          </View>
+        </View>
+
+        <View style={styles.detailTextWrap}>
+          <View style={styles.inlineText}>
+            <Text style={styles.title}>Release date: </Text>
+            <Text>{movieDetails.releaseDate}</Text>
+          </View>
+
+          <View style={styles.inlineText}>
+            <Text style={styles.title}>Director: </Text>
+            <Text>{movieDetails.director}</Text>
+          </View>
+
+          <View style={styles.inlineText}>
+            <Text style={styles.title}>Box office: </Text>
+            <Text>{movieDetails.boxOffice}</Text>
+          </View>
+        </View>
+
+        <View>
+          <Text style={[styles.title, styles.titleUppercase]}>Storyline</Text>
+          <Text>{movieDetails.storyline}</Text>
+        </View>
+
+        <Button label="Add to favourites" onPress={addFavourite} />
+      </View>
+    </ScrollView>
   );
 };
 
