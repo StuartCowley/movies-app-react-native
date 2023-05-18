@@ -1,11 +1,18 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
+  buttonWrap: {
+    marginLeft: 10,
+    width: 150,
+  },
   favouritesWrap: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    margin: 16,
+    marginTop: 16,
+    marginLeft: 16,
+    marginRight: 16,
+    marginBottom: 48,
   },
   title: {
     fontSize: 24,
@@ -14,7 +21,6 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     color: "#AAA",
-    marginBottom: 16,
   },
 });
 

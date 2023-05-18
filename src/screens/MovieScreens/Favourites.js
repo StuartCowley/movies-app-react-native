@@ -1,10 +1,9 @@
-import { FlatList, SafeAreaView, Text } from "react-native";
+import { FlatList, SafeAreaView, Text, View } from "react-native";
 
+import Button from "../../components/Button";
 import MovieCard from "../../components/MovieCard";
 import { useFavourites } from "../../context/FavouritesContext";
 import styles from "../../styles/Favourites.styles";
-
-// TODO Add styling to favourites list
 
 export default function Favourites() {
   const [favourites] = useFavourites();
@@ -17,12 +16,17 @@ export default function Favourites() {
         <FlatList
           data={favourites}
           renderItem={({ item }) => (
-            <MovieCard
-              title={item.title}
-              imageUrl={item.posterImage}
-              isHorizontalLayout
-              releaseDate={item.releaseDate}
-            />
+            <>
+              <MovieCard
+                title={item.title}
+                imageUrl={item.posterImage}
+                isHorizontalLayout
+                releaseDate={item.releaseDate}
+              />
+              <View style={styles.buttonWrap}>
+                <Button label="Remove from list" />
+              </View>
+            </>
           )}
         />
       )}
