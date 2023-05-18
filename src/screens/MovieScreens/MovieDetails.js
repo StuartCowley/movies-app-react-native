@@ -1,4 +1,4 @@
-import { useRoute } from "@react-navigation/native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 import { useEffect, useState } from "react";
 import { Image, ScrollView, Text, View } from "react-native";
 
@@ -10,6 +10,7 @@ import styles from "../../styles/MovieDetails.styles";
 const MovieDetails = () => {
   const [favourites, setFavourites] = useFavourites();
   const [movieDetails, setMovieDetails] = useState({});
+  const navigation = useNavigation();
 
   const { params } = useRoute();
 
@@ -68,7 +69,12 @@ const MovieDetails = () => {
           <Text>{movieDetails.storyline}</Text>
         </View>
 
-        <Button label="Add to favourites" onPress={addFavourite} />
+        <View style={styles.buttonWrap}>
+          <Button label="Add to favourites" onPress={addFavourite} />
+        </View>
+        <View style={styles.buttonWrap}>
+          <Button label="Back" onPress={() => navigation.navigate("Movies")} />
+        </View>
       </View>
     </ScrollView>
   );

@@ -1,6 +1,9 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
+  buttonWrap: {
+    marginTop: 16,
+  },
   container: {
     marginHorizontal: 24,
     marginTop: -60,
