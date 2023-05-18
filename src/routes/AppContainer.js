@@ -12,7 +12,7 @@ const Tab = createBottomTabNavigator();
 
 const AppContainer = () => {
   const MovieStack = () => (
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Movies" component={Movies} />
       <Stack.Screen name="Movie" component={MovieDetails} />
     </Stack.Navigator>
