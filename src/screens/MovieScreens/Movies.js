@@ -46,7 +46,7 @@ export default function Movies() {
           )}
           horizontal
         />
-        <Text>All movies</Text>
+        <Text style={styles.title}>All movies</Text>
         <FlatList
           data={allMovies}
           renderItem={({ item }) => (

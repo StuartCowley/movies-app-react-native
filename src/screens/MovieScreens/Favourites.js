@@ -11,17 +11,21 @@ export default function Favourites() {
   return (
     <SafeAreaView style={styles.favouritesWrap}>
       <Text style={styles.title}>Favourites</Text>
-      <FlatList
-        data={favourites}
-        renderItem={({ item }) => (
-          <MovieCard
-            title={item.title}
-            imageUrl={item.posterImage}
-            storyline={item.storyline}
-            releaseDate={item.releaseDate}
-          />
-        )}
-      />
+      {favourites.length === 0 ? (
+        <Text style={styles.subtitle}>No favourites added</Text>
+      ) : (
+        <FlatList
+          data={favourites}
+          renderItem={({ item }) => (
+            <MovieCard
+              title={item.title}
+              imageUrl={item.posterImage}
+              isHorizontalLayout
+              releaseDate={item.releaseDate}
+            />
+          )}
+        />
+      )}
     </SafeAreaView>
   );
 }

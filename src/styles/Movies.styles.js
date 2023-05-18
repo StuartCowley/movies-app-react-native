@@ -12,7 +12,10 @@ const styles = StyleSheet.create({
     width: 150,
   },
   title: {
+    marginVertical: 8,
+    textAlign: "center",
     fontSize: 20,
+    fontWeight: "bold",
   },
 });
 

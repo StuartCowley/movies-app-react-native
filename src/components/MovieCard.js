@@ -15,7 +15,7 @@ const MovieCard = ({
     return (
       <View style={styles.movieRowContainer}>
         <Image style={styles.movieColumnImage} source={{ uri: imageUrl }} />
-        <View>
+        <View style={styles.horizontal}>
           <Text style={styles.title}>{title}</Text>
           <Text style={styles.plot}>{characters}</Text>
           <Text style={styles.release}>{releaseDate}</Text>

@@ -12,6 +12,10 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginBottom: 8,
   },
+  subtitle: {
+    color: "#AAA",
+    marginBottom: 16,
+  },
 });
 
 export default styles;

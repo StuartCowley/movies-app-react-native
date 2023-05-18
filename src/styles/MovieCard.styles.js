@@ -11,6 +11,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     padding: 10,
   },
+  horizontal: {
+    margin: 8,
+  },
   movieColumnImage: {
     width: 150,
     height: 200,
@@ -19,7 +22,7 @@ const styles = StyleSheet.create({
   title: {
     fontWeight: "bold",
     marginBottom: 8,
-    maxWidth: 200,
+    maxWidth: 180,
   },
   plot: {
     maxWidth: 200,
