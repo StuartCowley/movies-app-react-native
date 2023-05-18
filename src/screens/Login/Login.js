@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Pressable, Text, TextInput, View } from "react-native";
+import { Text, TextInput, View } from "react-native";
 
+import Button from "../../components/Button";
 import { useAuthorisation } from "../../context/AuthorisationContext";
 import styles from "../../styles/Login.styles";
 
@@ -27,9 +28,7 @@ const Login = () => {
         value={password}
         onChangeText={setPassword}
       />
-      <Pressable style={styles.submitWrapper} onPress={onPress}>
-        <Text style={styles.submit}>Login</Text>
-      </Pressable>
+      <Button onPress={onPress} label="Login" />
     </View>
   );
 };

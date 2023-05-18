@@ -1,5 +1,6 @@
-import { Pressable, SafeAreaView, Text } from "react-native";
+import { SafeAreaView, Text } from "react-native";
 
+import Button from "../../components/Button";
 import { useAuthorisation } from "../../context/AuthorisationContext";
 import styles from "../../styles/Account.styles";
 
@@ -13,9 +14,7 @@ export default function Account() {
     <SafeAreaView style={styles.accountWrap}>
       <Text style={styles.title}>My Account</Text>
       <Text style={styles.subtitle}>An action packed account page</Text>
-      <Pressable style={styles.submitWrapper} onPress={onPress}>
-        <Text style={styles.submit}>Logout</Text>
-      </Pressable>
+      <Button onPress={onPress} label="Logout" />
     </SafeAreaView>
   );
 }
