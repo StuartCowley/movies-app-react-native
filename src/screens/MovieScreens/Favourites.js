@@ -6,7 +6,8 @@ import { useFavourites } from "../../context/FavouritesContext";
 import styles from "../../styles/Favourites.styles";
 
 export default function Favourites() {
-  const [favourites] = useFavourites();
+  const [favourites, setFavourites] = useFavourites();
+
   return (
     <SafeAreaView style={styles.favouritesWrap}>
       <Text style={styles.title}>Favourites</Text>
@@ -24,7 +25,14 @@ export default function Favourites() {
                 releaseDate={item.releaseDate}
               />
               <View style={styles.buttonWrap}>
-                <Button label="Remove from list" />
+                <Button
+                  label="Remove from list"
+                  onPress={() => {
+                    setFavourites(
+                      favourites.filter((film) => film.id !== item.id)
+                    );
+                  }}
+                />
               </View>
             </>
           )}
