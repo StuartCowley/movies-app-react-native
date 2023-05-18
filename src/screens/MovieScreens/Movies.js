@@ -29,38 +29,37 @@ export default function Movies() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView>
-        <Text style={styles.title}>MOST POPULAR MOVIES</Text>
-        <FlatList
-          data={popularMovies}
-          renderItem={({ item }) => (
-            <MovieCard
-              title={item.title}
-              imageUrl={item.posterImage}
-              onPress={() => {
-                navigation.navigate("Movie", { movieId: item.id });
-              }}
-              storyline={item.storyline}
-              releaseDate={item.releaseDate}
-            />
-          )}
-          horizontal
-        />
-        <Text style={styles.title}>All movies</Text>
-        <FlatList
-          data={allMovies}
-          renderItem={({ item }) => (
-            <MovieCard
-              title={item.title}
-              genre={item.genre}
-              imageUrl={item.image}
-              characters={item.characters}
-              releaseDate={item.release}
-              isHorizontalLayout
-            />
-          )}
-        />
-      </ScrollView>
+      <Text style={styles.title}>MOST POPULAR MOVIES</Text>
+      <FlatList
+        data={popularMovies}
+        style={styles.popularList}
+        renderItem={({ item }) => (
+          <MovieCard
+            title={item.title}
+            imageUrl={item.posterImage}
+            onPress={() => {
+              navigation.navigate("Movie", { movieId: item.id });
+            }}
+            releaseDate={item.releaseDate}
+            storyline={item.storyline}
+          />
+        )}
+        horizontal
+      />
+      <Text style={styles.title}>All movies</Text>
+      <FlatList
+        data={allMovies}
+        renderItem={({ item }) => (
+          <MovieCard
+            title={item.title}
+            genre={item.genre}
+            imageUrl={item.image}
+            characters={item.characters}
+            releaseDate={item.release}
+            isHorizontalLayout
+          />
+        )}
+      />
     </SafeAreaView>
   );
 }

@@ -11,10 +11,12 @@ const styles = StyleSheet.create({
     marginRight: 20,
     width: 150,
   },
+  popularList: {
+    minHeight: 320,
+  },
   title: {
-    marginVertical: 8,
-    textAlign: "center",
     fontSize: 20,
+    marginVertical: 16,
     fontWeight: "bold",
   },
 });

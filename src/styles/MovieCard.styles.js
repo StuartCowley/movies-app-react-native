@@ -26,11 +26,11 @@ const styles = StyleSheet.create({
   },
   plot: {
     maxWidth: 200,
-    marginBottom: 8,
   },
   release: {
     maxWidth: 200,
     fontStyle: "italic",
+    marginBottom: 8,
   },
 });
 

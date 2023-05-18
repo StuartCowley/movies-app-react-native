@@ -29,8 +29,8 @@ const MovieCard = ({
           <Image style={styles.movieColumnImage} source={{ uri: imageUrl }} />
           <View>
             <Text style={styles.title}>{title}</Text>
-            <Text style={styles.plot}>{storyline}</Text>
             <Text style={styles.release}>{releaseDate}</Text>
+            <Text style={styles.plot}>{storyline}</Text>
           </View>
         </Pressable>
       </View>
