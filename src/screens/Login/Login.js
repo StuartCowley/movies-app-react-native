@@ -21,9 +21,16 @@ const Login = () => {
         Your personal guide to world of cinema
       </Text>
       <Text style={styles.label}>Email</Text>
-      <TextInput style={styles.input} value={email} onChangeText={setEmail} />
+      <TextInput
+        autoCapitalize="none"
+        style={styles.input}
+        value={email}
+        onChangeText={setEmail}
+      />
       <Text style={styles.label}>Password</Text>
       <TextInput
+        secureTextEntry
+        autoCorrect={false}
         style={styles.input}
         value={password}
         onChangeText={setPassword}
