@@ -1,21 +1,21 @@
+# Movies App in React Native / Expo
 
-# AND Digital React Native Expo Training
-
-This project contains 13 branches that go through each exercise on the react native learning slides.
+This project contains 15 branches that go through each exercise on the react native learning slides. `my-run-through` was done over the duration of the course
 
 After excerise 5-1 you will need to run
+
 ```bash
-npm i 
+npm i
 ```
+
 as new packages have been added.
-
-
 
 It's an expo project so pretty easy to run!
 
 ## Run Locally
 
 If you don't have expo, install with:
+
 ```bash
 npm i -g expo-cli
 ```
@@ -37,8 +37,9 @@ Start the server
 ```bash
   expo start
 ```
+
 Then press 'i' or 'a' to open the ios or android simulator
 
 ## Authors
 
-- Jess Purvis
+- Jess Purvis (original)
